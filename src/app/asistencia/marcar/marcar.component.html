@@ -1,0 +1,83 @@
+<div class="row justify-content-center align-items-center">
+    <div class="container animate__animated animate__fadeInRight animate_faster">
+        <div class="row p-3">
+          <div class="col">
+            <h3><b>Marcar Asistencia</b></h3>
+            <hr class="text-light-gray">
+          </div>
+          <div class="row px-5">
+            <div class="col border container rounded">
+              <h5 class="px-2 pt-2">Llenar información de Asistencia</h5>
+              <hr class="text-light-gray">
+              <div class="container">
+                <div class="row">
+      
+                  <div class="col">
+                    <div class="form-group pb-2 row">
+                      <label for="carnetInput" class="col-sm-3 col-form-label">Carnet:</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" id="carnetInput" name="carnet" placeholder="Ingresa tu carnet" #carnetInput>
+                      </div>
+                    </div>
+                  </div>
+      
+                  <div class="col">
+                    <div class="form-group pb-2 row">
+                      <label for="nombreInput" class="col-sm-3 col-form-label">Nombre:</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" id="nombreInput" name = "nombre" placeholder="Ingresa tu nombre" #nombreInput>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+      
+                <hr class="text-light-gray">
+                <hr class="text-light-gray">
+      
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group pb-2 row">
+                          <label for="carnetInput" class="col-sm-3 col-form-label">ID evento:</label>
+                          <div class="col-sm-9">
+                            <input type="number" class="form-control" id="idEventoInput" name = "id_evento" placeholder="Ingresa el id del evento al que asistes" #idInput>
+                          </div>
+                        </div>
+                      </div>
+          
+                      <div class="col">
+                        <div class="form-group pb-2 row">
+                          <label for="nombreInput" class="col-sm-3 col-form-label">Nombre evento:</label>
+                          <div class="col-sm-9">
+                            <input type="text" class="form-control" id="eventoInput" name="evento"  placeholder="Ingresa el nombre del evento al que asistes" #eventoInput>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+    
+                <hr class="text-light-gray">
+                <hr class="text-light-gray">
+      
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group pb-2 row">
+                          <label for="carnetInput" class="col-sm-3 col-form-label">Imagen Asistencia:</label>
+                          <div class="col-sm-9">
+                            <input type="file" class="form-control" id="fotoInput" (change)="seleccionarFoto($event)" #fotoInput>
+                          </div>
+                        </div>
+                      </div>
+          
+                </div>
+    
+                <hr class="text-light-gray">
+    
+                <div class="row">
+                  <button type="submit" class="btn btn-dark mb-3" (click)="marcarAsistencia()">Enviar Asistencia</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+</div>
+

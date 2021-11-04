@@ -1,0 +1,35 @@
+<div class="container animate__animated animate__fadeInRight animate_faster">
+    <div class="row p-3">
+      <div class="col">
+        <h3><b>Ver Eventos Asistidos</b></h3>
+        <hr class="text-light-gray">
+      </div>
+      <div class="row">
+        <div class="col d-flex pb-4 pt-2">
+            <h4 class="px-2">Buscar:</h4>
+            <input class="form-control px-2" type="text" placeholder="Carnet" (change)="buscar()" #carnetBuscar>
+        </div>
+      </div>
+  
+      <div class="row">
+        <div class="col px-3">
+          <table class="table align-middle">
+            <thead class="bg-dark text-light">
+              <tr>
+                <th scope="col">Carnet</th>
+                <th scope="col">ID Evento</th>
+                <th scope="col">Nombre del evento</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let evento of eventos">
+                <th>{{evento.carnet}}</th>
+                <td class="align-middle">{{evento.id_evento}}</td>
+                <td class="align-middle">{{evento.evento}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>

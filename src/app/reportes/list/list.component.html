@@ -1,0 +1,43 @@
+<div class="container animate__animated animate__fadeInRight animate_faster">
+  <div class="row p-3">
+    <div class="col">
+      <h3><b>Ver todos los reportes</b></h3>
+      <hr class="text-light-gray">
+    </div>
+    <div class="row">
+      <div class="col d-flex pb-4 pt-2">
+          <h4 class="px-2">Buscar:</h4>
+          <input class="form-control px-2" type="number" placeholder="Carnet" (keyup.enter)="buscar()" #carnetBuscar>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col px-3">
+        <table class="table align-middle">
+          <thead class="bg-dark text-light">
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Curso</th>
+              <th scope="col">Fecha y hora</th>
+              <th scope="col">Servidor</th>
+              <th scope="col">Opciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let estudiante of lista_reportes['data']">
+              <th>{{estudiante['carnet']}}</th>
+              <td class="align-middle">{{estudiante['nombre']}}</td>
+              <td class="align-middle">{{estudiante['curso']}}</td>
+              <td class="align-middle">{{estudiante['fecha'] |  date:'dd/MM/yyyy - hh:mm'}}</td>
+              <td class="align-middle">{{estudiante['servidor']}}</td>
+              <td class="align-middle">
+                <button type="button" class="btn btn-dark" (click)="guardar_id(estudiante['_id'])">Ver</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

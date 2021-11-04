@@ -1,0 +1,41 @@
+<div class="container animate__animated animate__fadeInRight animate_faster">
+    <div class="row p-3">
+      <div class="col">
+        <h3><b>Ver Asistencia por evento</b></h3>
+        <hr class="text-light-gray">
+      </div>
+      <div class="row">
+        <div class="col d-flex pb-4 pt-2">
+            <h4 class="px-2">Buscar:</h4>
+            <input class="form-control px-2" type="text" placeholder="ID de evento" (change)="buscar()" #eventoBuscar>
+        </div>
+      </div>
+  
+      <div class="row">
+        <div class="col px-3">
+          <table class="table align-middle">
+            <thead class="bg-dark text-light">
+              <tr>
+                <th scope="col">Carnet</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Evento</th>
+                <th scope="col">Fecha</th>
+                <th scope="col">Servidor</th>
+                <th scope="col">Foto</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let evento of eventos">
+                <th>{{evento.carnet}}</th>
+                <td class="align-middle">{{evento.nombre}}</td>
+                <td class="align-middle">{{evento.evento}}</td>
+                <td class="align-middle">{{evento.created_at}}</td>
+                <td class="align-middle">{{evento.servidor}}</td>
+                <td class="align-middle"><a target="_blank" [href]="'https://proyecto2-p4.s3.us-east-2.amazonaws.com/' + evento.foto">{{evento.foto}}</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
