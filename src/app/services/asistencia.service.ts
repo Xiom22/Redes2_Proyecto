@@ -7,7 +7,7 @@ import { Asistencia } from '../models/Asistencia';
 })
 export class AsistenciaService {
 
-  url = 'http://redes2-lb-765412001.us-east-1.elb.amazonaws.com/asistencia'
+  url = 'https://api.pablorocadr2.tk/asistencia'
 
   constructor(
     private http: HttpClient
