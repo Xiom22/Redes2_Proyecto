@@ -17,7 +17,7 @@ export class EstudianteService {
     'Content-Type':'application/json'
   });
 
-  prefijo_url = 'http://redes2-lb-824389543.us-east-1.elb.amazonaws.com/reporte';
+  prefijo_url = 'http://redes2-lb-765412001.us-east-1.elb.amazonaws.com/asistencia';
 
   enviar_reporte(
     carnet: string,
